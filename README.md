@@ -1,37 +1,79 @@
 # MDP REPRESENTATION
 
 ## AIM:
-Write your aim here
-
+To represent any one real-world problem in MDP form.
 ## PROBLEM STATEMENT:
-
-### Problem Description
-Write your answer here
+To develop a AI agent which controls the level of fluoride percentage in water.
 
 ### State Space
-Write your answer here
+```
+{A,B,C} -> {0,1,2}
 
+where,
+
+A->LOWER than required
+
+B->CORRECT amount
+
+C->HIGHER than required
+```
 ### Sample State
-Write your answer here
+```
+A->0-lower than required
 
-### Action Space
-Write your answer here
+Action Space
+{H,L} -> {0,1}
 
+where,
+
+H -> higher the fluoride percent
+
+L -> higher the fluoride percent
+```
+### Action Space:
+```
+{H,L} -> {0,1}
+
+where,
+
+H -> higher the fluoride percent
+
+L -> higher the fluoride percent
 ### Sample Action
-Write your answer here
+H -> 0
 
+which means we have to increase the fluoride percent in water
+
+```
 ### Reward Function
-Write your answer here
-
+```
+R = { +1 , for correct amount of fluoride
+       0 , otherwise
+```
 ### Graphical Representation
-Write your answer here
+![image](https://github.com/Ramsai1234/mdp-representation/assets/94269989/05fa159a-d069-4b98-b2ab-36f8b3d04b8d)
+
 
 ## PYTHON REPRESENTATION:
-Write your code here
+```
+P = {
+    0 : {
+        0 : [(1.0, 1, 1.0, True)],
+        1 : [(1.0, 0, 0.0, False)]
+    },
+    1 : {
+        0 : [(1.0, 2, 0.0, False)],
+        1 : [(1.0, 0, 0.0, False)]
+    },
+    2 : {
+        0 : [(1.0, 2, 0.0, False)],
+        1 : [(1.0, 1, 1.0, True)]
+    }
+}
+```
 
 ## OUTPUT:
-Write your Python output here
+![image](https://github.com/Ramsai1234/mdp-representation/assets/94269989/0970b770-ad94-486c-9ad2-de130d197dca)
 
 ## RESULT:
-Write your output here
-
+Thus the given real world problem is successfully represented in a MDP form .
